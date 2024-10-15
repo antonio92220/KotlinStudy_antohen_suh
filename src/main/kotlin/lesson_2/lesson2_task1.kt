@@ -1,5 +1,6 @@
 fun main() {
-    val arithmeticMean = (3 + 4 + 3 + 5) / 4.0
+    val numberOfStudents = 4
+    val arithmeticMean = (3 + 4 + 3 + 5).toFloat() / numberOfStudents
 
     println(String.format("%.2f", arithmeticMean))
 }
