@@ -1,13 +1,16 @@
 fun main() {
-    val numberOfOrders = 75
-    val thankYouMessage: String = "Спасибо за покупку!"
-
-    println("Количество товара - " + numberOfOrders)
-    println(thankYouMessage)
-
-    var numberOfEmployees = 2000
-//    println("Количество сотрудников"+numberOfEmployees)
-    numberOfEmployees = 1999
-    println("Количество сотрудников - $numberOfEmployees")
+    var responseCode : Int = 200
+    var serverDelayTime : Double = 0.45
+    val maxTimoutTime : Float = 5.0f
 
 }
+
+/*
+Задача 2: Работа с числами (Performance Test)
+Нам нужно сохранить метрики производительности.
+
+Создай переменную для HTTP-кода ответа (например, 200). Укажи тип данных явно (как Int).
+
+Создай переменную для времени отклика сервера в секундах (например, 0.45). Укажи тип данных явно (как Double).
+
+Создай переменную для максимально допустимого времени ожидания (timeout), но используй тип Float (не забудь про суффикс f). Значение, например, 5.0.*/

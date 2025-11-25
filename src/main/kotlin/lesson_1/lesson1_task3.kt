@@ -1,14 +1,16 @@
 fun main() {
-    val year = 1961
-    var hour = "09"
-    var minute = "07"
+    val separator : Char = '|'
+    val textOfError : String = "Connection timed out"
 
-    println(year)
-    println(hour)
-    println(minute)
-
-    hour = "10"
-    minute = "55"
-
-    print("$hour:$minute")
+    println(separator+textOfError+separator)
 }
+
+
+/*
+Задача 3: Символы и Строки (Logs)
+Создай переменную типа Char, в которую положи символ разделителя логов (например, | или #).
+
+Создай переменную типа String с текстом ошибки (например, "Connection timed out").
+
+Выведи в консоль разделитель, затем текст ошибки, затем снова разделитель (всё на отдельных строках или подряд — как
+удобнее, главное используй переменные).*/

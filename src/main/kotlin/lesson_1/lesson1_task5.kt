@@ -1,13 +1,54 @@
 package lesson_1
 
 fun main() {
-    val totalSecondsInSpace = 6480
-    val minuteInHour = 60
-    val secondsInMinute = 60
-    val hours = totalSecondsInSpace / (minuteInHour*secondsInMinute)
-    val remainingSecondsAfterHours = totalSecondsInSpace % (minuteInHour*secondsInMinute)
-    val minutes = remainingSecondsAfterHours / minuteInHour
-    val seconds = remainingSecondsAfterHours % secondsInMinute
+    val bugId : Long = 88005553535L
+    val title : String = "Crash on main screen"
+    var bugStatus : String = "Open"
+    val priority : String = "Critical"
+    val steps : String = ""
+    var numbersOfPlaybackAttemps : Int = 1
+    var bugIsFixed : Boolean = false
 
-    println("%02d:%02d:%02d".format(hours, minutes, seconds))
+    println("Bug Id-$bugId $title Текущий статус - $bugStatus")
+    bugStatus = "In Progress" // "Разработчик взял баг в работу"
+    numbersOfPlaybackAttemps = 2 // "QA проверил еще раз"
+    bugIsFixed = true // "Разработчик починил"
+    bugStatus = "Closed" // "Разработчик починил"
+    println("Bug Status - $bugStatus Баг исправлен? - $bugIsFixed")
+
 }
+
+
+/*Задача 5: Сложная (Bug Report)
+Смоделируй "Карточку бага" в коде, используя только переменные. Тебе нужно создать набор переменных,
+ описывающих один конкретный баг, и правильно выбрать для них типы (val/var и типы данных).
+
+Вводные данные бага:
+
+ID бага: уникальный номер, очень большой (например, 88005553535). Используй тип Long (вспомни про суффикс L). Это значение не меняется.
+
+Заголовок: "Crash on main screen". Не меняется.
+
+Статус: Изначально "Open". Может меняться.
+
+Приоритет: "Critical". Не меняется.
+
+Шаги воспроизведения: Строка с описанием. Не меняется.
+
+Количество попыток воспроизведения: Изначально 1. Может расти.
+
+Исправлен ли баг?: Логический тип. Изначально false.
+
+Сценарий:
+
+Объяви все переменные с правильными типами и ключевыми словами.
+
+Выведи в консоль: ID, Заголовок и текущий Статус.
+
+"Разработчик взял баг в работу": измени Статус на "In Progress".
+
+"QA проверил еще раз": увеличь Количество попыток до 2.
+
+"Разработчик починил": измени Исправлен ли баг? на true и Статус на "Closed".
+
+Выведи финальный статус и значение флага "Исправлен ли баг?".*/
