@@ -1,15 +1,26 @@
 package org.example.lesson_2
 
 fun main() {
-    val numberOfCrystals = 7
-    val numberOfIron = 11
-    val buffValuePercentage = 20
-    val percent = 100
-    val buffValueFraction = buffValuePercentage / percent
+    var attempts = 0
+    attempts = attempts + 1
+    println("Количество упавших тестов - $attempts")
+    attempts += 1
+    println("Количество упавших тестов - $attempts")
+    attempts++
+    println("Количество упавших тестов - $attempts")
 
-    val crystalsGrowthAfterBuff = numberOfCrystals * buffValueFraction
-    val ironGrowthAfterBuff = numberOfIron * buffValueFraction
-
-    println("Количество бонусной кристаллической руды = ${crystalsGrowthAfterBuff.toInt()}")
-    println("Количество бонусной железной руды = ${ironGrowthAfterBuff.toInt()}")
 }
+
+/*
+Задача 4: Инкремент (Retry Counter)
+Тест упал, пробуем перезапустить. Нужно посчитать попытки.
+
+Создай изменяемую переменную var attempts = 0.
+
+Увеличь её на 1, используя обычное сложение (attempts = ...). Выведи.
+
+Увеличь её ещё на 1, используя оператор +=. Выведи.
+
+Увеличь её ещё на 1, используя инкремент ++. Выведи.
+
+Итог: в консоли должно быть последовательно 1, 2, 3.*/

@@ -1,16 +1,24 @@
 package lesson_2
 
 fun main() {
-    val numberOfPermanentStaff = 50
-    val numberOfInterns = 30
-    val averageSalaryOfPermanentStaff = 30000
-    val averageSalaryOfInterns = 20000
+    val total = 10
+    val passed: Double = 3.0
+    val rate = passed / total
 
-    val salaryPermanentStaff = numberOfPermanentStaff * averageSalaryOfPermanentStaff
-    val salaryAllStaff = salaryPermanentStaff + numberOfInterns * averageSalaryOfInterns
-    val averageSalary = salaryAllStaff / (numberOfInterns + numberOfPermanentStaff)
-
-    println("Общая З/П постоянных сотрудников = $salaryPermanentStaff")
-    println("Общие расходы по З/П = $salaryAllStaff")
-    println("Средня З/П в компании = $averageSalary")
+    println("Соотношение успешных тестов к всем тестам - $rate")
 }
+
+/*
+Задача 2: Нюансы деления (Success Rate)
+Мы считаем процент успешных тестов. Тут тебя ждет ловушка из видео!
+
+Есть всего тестов: val total = 10.
+
+Успешно прошло: val passed = 3.
+
+Попробуй посчитать рейтинг: раздели passed на total и запиши в переменную rate.
+
+Выведи rate.
+
+Задача: Сделай так, чтобы в консоли было не 0, а 0.3 (или 30.0 при умножении на 100).
+Вспомни, что нужно сделать с одним из чисел, чтобы результат стал дробным.*/

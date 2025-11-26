@@ -1,15 +1,22 @@
 package org.example.lesson_2
 
 fun main() {
-    val hourOfDeparture = 9
-    val minutesOfDeparture = 39
-    val travelTimeInMinutes = 457
-    val hoursInDay = 24
-    val minutesInHour = 60
+    val requests = 23
+    val servers = 5
+    val extraRequest = requests % servers
 
-    val arrivalTimeInMinutes = (hourOfDeparture * minutesInHour) + minutesOfDeparture + travelTimeInMinutes
-    val arrivalHours = (arrivalTimeInMinutes / minutesInHour) % hoursInDay
-    val arrivalMinutes = arrivalTimeInMinutes % minutesInHour
 
-    println(String.format("%02d:%02d", arrivalHours, arrivalMinutes))
+    println("Лишними останутся $extraRequest запросов")
 }
+
+/*
+Задача 3: Остаток от деления (Load Balancer)
+Распределяем нагрузку.
+
+Есть 23 входящих запроса (requests).
+
+У нас есть 5 серверов (servers).
+
+Мы распределяем запросы поровну. Сколько запросов останется "лишними" (не влезут в равное распределение)?
+
+Используй оператор остатка от деления % и выведи это число.*/
