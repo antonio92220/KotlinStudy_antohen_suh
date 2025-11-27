@@ -1,18 +1,19 @@
 package org.example.lesson_3
 
 fun main() {
+    val requestsPerSecond = 150
+    val testDurationSeconds = 60
+    val totalRequestsReport = "Total requests sent during the load test: ${requestsPerSecond * testDurationSeconds}"
 
-    val numberForTable = 6
-    val multiplicationTable = """
-        $numberForTable * 1 = ${numberForTable * 1}
-        $numberForTable * 2 = ${numberForTable * 2}
-        $numberForTable * 3 = ${numberForTable * 3}
-        $numberForTable * 4 = ${numberForTable * 4}
-        $numberForTable * 5 = ${numberForTable * 5}
-        $numberForTable * 6 = ${numberForTable * 6}
-        $numberForTable * 7 = ${numberForTable * 7}
-        $numberForTable * 8 = ${numberForTable * 8}
-        $numberForTable * 9 = ${numberForTable * 9}
-    """.trimIndent()
-    println(multiplicationTable)
+    println(totalRequestsReport)
 }
+
+/*
+Задача 3: Выражения в шаблонах
+Создай переменную, которая содержит результат вычисления, встроенный в строку.
+Создай переменную requestsPerSecond со значением 150.
+Создай переменную testDurationSeconds со значением 60.
+Создай строку totalRequestsReport, которая выводит текст: "Total requests sent during the load test: [результат]"
+Внимание: Вместо [результат] должно быть встроено выражение, которое вычисляет общее количество запросов,
+умножая requestsPerSecond на testDurationSeconds.
+Выведи totalRequestsReport.*/

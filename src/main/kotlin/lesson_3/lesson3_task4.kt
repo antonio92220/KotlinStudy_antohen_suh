@@ -1,18 +1,28 @@
 package org.example.lesson_3
 
 fun main() {
-    var from = "E2"
-    var to = "E4"
-    var moveNumber = 1
+    val bugTitle = "Заголовок бага"
+    val bugReport = """
+        $bugTitle
+        Шаги для воспроизведения бага:
+        1. Шаг один
+        2. Шаг два
+        3. Шаг три
+    """.trimIndent()
 
-    var moveString = "$from-$to;$moveNumber"
-    println("Первый ход: $moveString")
-
-    from = "D2"
-    to = "D3"
-    moveNumber = 2
-
-    moveString = "$from-$to;$moveNumber"
-    println("Следующий ход: $moveString")
+    println(bugReport)
 
 }
+
+/*
+Сформируй описание бага, используя многострочный литерал (тройные кавычки).
+Создай переменную bugTitle со значением "UI issue on Checkout page".
+Создай многострочную переменную bugDescription, которая содержит:
+Заголовок бага (bugTitle) с помощью интерполяции.
+Несколько строк текста с любыми отступами, описывающих шаги:
+Steps to reproduce:
+1. Add item to cart.
+2. Open checkout.
+3. Button "Pay" is missing.
+Примени к этой переменной функцию удаления общего отступа (.trimIndent()).
+Выведи bugDescription.*/

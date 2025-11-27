@@ -1,15 +1,25 @@
 package org.example.lesson_3
 
 fun main() {
-    val moveString = "D2-D4;0"
+    val failText = "FAIL"
+    val expectedText = "EXPECTED"
+    val jsonText = "\"TestResult\": \"$failText\", \n\"Reason\": \"Value is not \"$expectedText\".\""
 
-    val parts = moveString.split("-", ";")
-
-    val from = parts[0]
-    val to = parts[1]
-    val moveNumber = parts[2]
-
-    println("Откуда: $from")
-    println("Куда: $to")
-    println("Номер хода: $moveNumber")
+    println(jsonText)
 }
+
+
+/*
+Задача 5: JSON-фрагмент (Экранирование и Спецсимволы) (Сложная)
+Создай одну переменную, содержащую текстовый фрагмент, который должен выглядеть как часть кода (JSON),
+используя при этом экранирование и символ перевода строки.
+
+Переменная должна выводиться в консоль в точности как этот двустрочный блок, включая кавычки:
+
+"TestResult": "FAIL",
+"Reason": "Value is not \"EXPECTED\"."
+Используй две текстовые переменные для значений "FAIL" и "EXPECTED" и подставь их в результирующую строку
+с помощью интерполяции.
+
+Требование: Все двойные кавычки и перевод строки должны быть реализованы через экранирование (\) и специальный символ
+(\n).*/

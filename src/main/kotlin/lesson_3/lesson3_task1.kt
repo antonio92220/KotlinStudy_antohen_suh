@@ -1,16 +1,17 @@
 package org.example.lesson_3
-import java.time.LocalTime
 
 fun main() {
 
-    val userName = "Браток"
-    val currentTime = LocalTime.now()
-    val morningTimeStart = LocalTime.of(6, 0)
-    val eveningTimeStart = LocalTime.of(18, 0)
-
-    if (currentTime.isAfter(morningTimeStart) && currentTime.isBefore(eveningTimeStart)) {
-        println("Добрый день,$userName")
-    } else {
-        println("Добрый вечер,$userName")
-    }
+    val host = "https://api.myapp.com"
+    val path = "/users"
+    val fullUrl = host + path
+    println(fullUrl)
 }
+
+/*
+Задача 1: Конкатенация (Простая)
+Создай две переменные, содержащие части URL-адреса.
+Переменная host со значением "https://api.myapp.com".
+Переменная path со значением "/users".
+Создай третью переменную fullUrl, объединив host и path с помощью оператора конкатенации.
+Выведи fullUrl в консоль.*/
