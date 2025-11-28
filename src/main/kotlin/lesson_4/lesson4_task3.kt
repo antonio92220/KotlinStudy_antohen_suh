@@ -1,15 +1,23 @@
 package org.example.lesson_4
 
-const val SUN: Boolean = true
-const val TENT_IS_OPEN: Boolean = true
-const val AIR_HUMIDITY: Int = 20
-const val NON_FAVORABLE_SEASON: String = "зима"
-
 fun main() {
-    val sunToday: Boolean = true
-    val tentNow: Boolean = true
-    val airHumidityNow: Int = 20
-    val seasonNow = "зима"
-    println("Благоприятные ли условия сейчас для роста бобовых? ${SUN == sunToday && tentNow == TENT_IS_OPEN &&
-            airHumidityNow == AIR_HUMIDITY && seasonNow != NON_FAVORABLE_SEASON}")
+
+    val factName = "Guest"
+    val isMatch : Boolean = SUPPOSED_NAME == factName
+    println("User match result: $isMatch")
+
 }
+
+const val SUPPOSED_NAME = "Admin"
+
+/*
+Задача 3: Валидация данных (Boolean + String Logic)
+Сравниваем, совпадает ли полученное имя пользователя с ожидаемым, и выводим отчет.
+
+Создай переменную с ожидаемым именем (строка, например, "Admin").
+
+Создай переменную с фактическим именем (строка, например, "Guest").
+
+Создай булеву переменную isMatch, которая проверяет их на равенство (==).
+
+Выведи строку вида: "User match result: false".*/
