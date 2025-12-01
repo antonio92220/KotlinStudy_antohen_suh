@@ -1,22 +1,31 @@
 package org.example.lesson_5
 
-/*Изменить пример из видео урока. В уроке создавался блок кода, считывающий возраст. И если
-возраст больше или равен 18 лет, показывали экран со скрытым контентом (выводили это сообщение.
-в консоль в качестве имитации).
-Новое условие:
-- Пользователь должен вводить не возраст, а год рождения;
-- Возраст пользователя высчитывать на основании текущего года;
-- Вычисляемый результат должен сравниваться с константой, в которой хранится возраст
-совершеннолетия (18);
-- Если год рождения подходит, выводить сообщение "Показать экран со скрытым контентом".*/
-
 fun main() {
-    val yearOfBirth = readln()!!.toInt()
-    val age = 2023 - yearOfBirth
-    if (age >= AGE_OF_MAJORITY) {
-        println("Показать экран со скрытым контентом")
-    } else println("Показать экран с ограниченным контентом")
-
-
+    val logLevel = readln()
+    if (logLevel == ERROR_LOG) {
+        println("Critical issue found!")
+    } else if (logLevel == WARN_LOG) {
+        println("Potential problem")
+    } else if (logLevel == INFO_LOG) {
+        println("System working normally")
+    } else println("Unknown log level")
 }
-const val AGE_OF_MAJORITY = 18
+
+const val ERROR_LOG = "ERROR"
+const val WARN_LOG = "WARN"
+const val INFO_LOG = "INFO"
+
+/*
+Нужно определить уровень важности сообщения лога.
+
+Создай переменную для уровня лога (строка). Возможные значения: "ERROR", "WARN", "INFO".
+
+Напиши конструкцию, которая:
+
+Если уровень "ERROR" — выводит красную тревогу: "Critical issue found!".
+
+Если уровень "WARN" — выводит предупреждение: "Potential problem".
+
+Если уровень "INFO" — выводит: "System working normally".
+
+Во всех остальных случаях — выводит: "Unknown log level".*/

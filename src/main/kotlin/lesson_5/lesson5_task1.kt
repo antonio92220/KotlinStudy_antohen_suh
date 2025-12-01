@@ -1,16 +1,23 @@
 package org.example.lesson_5
 
-const val ANSWER = 7
-
 fun main() {
-    println("Привет!Введи, сколько будет 5+2=?")
-    val userAnswer = readln()!!.toInt()
+    val password = readln()
 
-    if (userAnswer == ANSWER) {
-        println("Добро пожаловать!")
-
+    if (password.length < RECOMMENDED_LENGTH_OF_PASSWORD) {
+        println("Password is too short")
     } else {
-        println("доступ запрещен")
-
+        println("Password accepted")
     }
 }
+
+const val RECOMMENDED_LENGTH_OF_PASSWORD = 8
+
+/*
+Задача 1: Проверка длины пароля (If/Else)
+Реализуй базовую валидацию.
+
+Создай строковую переменную для пароля (задай любое значение).
+
+Если длина пароля меньше 8 символов — выведи в консоль "Password is too short".
+
+В противном случае — выведи "Password accepted".*/

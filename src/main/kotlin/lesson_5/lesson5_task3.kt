@@ -1,30 +1,21 @@
 package org.example.lesson_5
 
-/*Для алгоритма простого приложения-лотереи, нужно угадать два числа от 0 до 42. Если угадать
-только одно - игрок получает утешительный приз. Напиши программу, проверяющую выигрыш.
-Пользователь должен вводить числа в консоль. Правильные числа заранее известны и хранятся в
-переменных. Оформить ввод текстовыми подсказками о том, что нужно вводить. Вывести отдельным
-сообщением, какие числа были нужны для победы.
-- если оба числа угаданы вывести "Поздравляем! Вы выиграли главный приз!*;
-- если угадано только одно число, вывести "Вы выиграли утешительный приз!*;
-- если не угадано ничего, вывести "Неудача!",
-- программа должна учитывать ввод чисел в обратном порядке.*/
-
 fun main() {
-    println("Введите первое число")
-    val numberOne = readln()!!.toInt()
-    println("Введите второе число")
-    val numberTwo = readln()!!.toInt()
-    if (numberOne == NUMBER_ONE && numberTwo == NUMBER_TWO) {
-        println("Поздравляем, вы выиграли главный приз")
-    }
-    else if (numberOne == NUMBER_ONE || numberTwo == NUMBER_TWO) {
-        println("Вы выиграли утешительный приз")
-    }
-    else {
-        println("Неудача")
+    val nameOfEnvironment = readln()
+    when(nameOfEnvironment)
+    {
+        "QA" -> println("http://qa-server.com")
+        "DEV" -> println("http://dev-server.com")
+        "PROD" -> println("http://prod-server.com")
+        else -> println("Invalid environment")
     }
 }
 
-const val NUMBER_ONE = 15
-const val NUMBER_TWO = 20
+/*
+Используй конструкцию when для выбора URL в зависимости от названия среды.
+Создай переменную с названием окружения (например, "DEV", "QA" или "PROD").
+С помощью when проверь значение этой переменной:
+Для "QA" — выведи "http://qa-server.com".
+Для "DEV" — выведи "http://dev-server.com".
+Для "PROD" — выведи "http://prod-server.com".
+Для любого другого значения — выведи "Invalid environment".*/
