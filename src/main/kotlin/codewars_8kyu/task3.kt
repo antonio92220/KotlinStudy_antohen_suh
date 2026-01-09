@@ -1,4 +1,4 @@
-package codewars
+package codewars_8kyu
 
 fun addFive(num: Int): Int {
     return num + 5

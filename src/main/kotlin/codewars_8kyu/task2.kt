@@ -1,4 +1,4 @@
-package codewars
+package codewars_8kyu
 
 fun grow(arr: IntArray): Int {
     var multi = 1

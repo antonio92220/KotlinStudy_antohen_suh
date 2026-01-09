@@ -1,4 +1,4 @@
-package codewars
+package codewars_8kyu
 
 fun countPositivesSumNegatives(input : Array<Int>?) : Array<Int> {
     return if (!input.isNullOrEmpty()) {

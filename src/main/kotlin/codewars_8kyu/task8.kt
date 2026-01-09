@@ -1,4 +1,4 @@
-package codewars
+package codewars_8kyu
 
 
 fun opposite(number: Int): Int {

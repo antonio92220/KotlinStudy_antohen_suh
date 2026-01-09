@@ -1,4 +1,4 @@
-package codewars
+package codewars_8kyu
 
 
 fun calculateYears(years: Int): IntArray { // Было Array<Int>

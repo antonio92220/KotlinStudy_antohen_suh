@@ -1,4 +1,4 @@
-package codewars
+package codewars_8kyu
 
 fun dutyFree(normPrice: Int, discount:Int, hol:Int) : Int {
     return (hol * 100) / (normPrice * discount)
