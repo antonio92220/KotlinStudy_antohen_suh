@@ -1,14 +1,30 @@
 package LeetCode_easy
 
-class Solution {
+fun isPalindrome(poli: Int): Boolean {
+    if (poli < 0) return false
+
+    var original = poli
+    var reversed = 0
+
+    while (original != 0) {
+        val lastDigit = original % 10
+        reversed = reversed * 10 + lastDigit
+        original /= 10
+    }
+
+    return reversed == poli
+
+
+}
+
+
+/*class Solution {
     fun isPalindrome(x: Int): Boolean {
         val reversedText = x.toString().reversed()
         return x.toString() == reversedText
     }
 }
 
-
-/*БЕЗ СТРОК
 
 class Solution {
     fun isPalindrome(x: Int): Boolean {
